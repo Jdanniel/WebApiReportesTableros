@@ -155,7 +155,8 @@ namespace WebApiReportesTableros.Controllers
                     "CONCLUSIONES_FINAL",
                     "MOTIVO_CANCELACION_FINAL",
                     "MOTIVO_RECHAZO_FINAL",
-                    "TIPO_SERVICIO_FINAL"
+                    "TIPO_SERVICIO_FINAL",
+                    "OBSERVACIONES_FINALES"
                 };
 
                 if(file.Exists)
@@ -173,7 +174,7 @@ namespace WebApiReportesTableros.Controllers
                 using (var package = new ExcelPackage(file))
                 {
                     var worksheet = package.Workbook.Worksheets.Add("HOJA");
-                    using (var cells = worksheet.Cells[1, 1, 1, 19])
+                    using (var cells = worksheet.Cells[1, 1, 1, 20])
                     {
                         cells.Style.Font.Bold = true;
                         cells.Style.Font.Color.SetColor(Color.White);
@@ -221,6 +222,7 @@ namespace WebApiReportesTableros.Controllers
                         worksheet.Cells["Q" + j].Value = replica.MOTIVO_CANCELACION_FINAL;
                         worksheet.Cells["R" + j].Value = replica.MOTIVO_RECHAZO_FINAL;
                         worksheet.Cells["S" + j].Value = replica.TIPO_SERVICIO_FINAL;
+                        worksheet.Cells["T" + j].Value = replica.OBSERVACIONES_FINAL;
                         j++;
                     }
                     worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();

@@ -65,6 +65,9 @@ namespace WebApiReportesTableros.Models
         [JsonProperty("TIPO_SERVICIO_FINAL")]
         public string TIPO_SERVICIO_FINAL { get; set; }
 
+        [JsonProperty("OBSERVACIONES_FINALES")]
+        public string OBSERVACIONES_FINAL { get; set; }
+
         [JsonProperty("ID_SERVICIO")]
         public int ID_SERVICIO { get; set; }
     }

@@ -25596,6 +25596,7 @@ namespace WebApiReportesTableros.Models
             });
             modelBuilder.Query<ReplicaResponse>();
             modelBuilder.Query<TpvInstaladaResponse>();
+            modelBuilder.Query<TpvsInstaladasGraficaResponse>();
         }
     }
 }
