@@ -70,5 +70,7 @@ namespace WebApiReportesTableros.Models
 
         [JsonProperty("ID_SERVICIO")]
         public int ID_SERVICIO { get; set; }
+        [JsonProperty("BITACORA")]
+        public string BITACORA { get; set; }
     }
 }
